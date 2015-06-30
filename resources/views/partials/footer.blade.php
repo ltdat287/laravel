@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="{{ asset('student.list') }}">List Student <span class="sr-only">(current)</span></a>
+                <li class="active"><a href="{{ asset('student/list') }}">List Student <span class="sr-only">(current)</span></a>
                 </li>
                 <li><a href="javascript:void(0)">Quản lý sinh viên</a></li>
                 <li><a href="#">Quản lý lớp</a></li>

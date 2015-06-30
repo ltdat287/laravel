@@ -45,3 +45,10 @@ Route::get('student/insert',function()
 {
     return view('student.insert');
 });
+
+Route::get('student/edit/{id}',[
+    'as' => 'student.edit',
+    'uses' => 'StudentController@show'
+]);
+
+Route::post('student/edit/{id}','StudentController@update');

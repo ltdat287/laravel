@@ -36,7 +36,7 @@ Trang danh sách sinh viên
                     <a class="btn-link" href="../student/chooseclass.php?id={{ $item['id'] }}">Choose</a>
                 </td>
                 <td>
-                    <a class="btn-link" href="../student/edit.php?id={{ $item['id'] }}">Edit</a>
+                    <a class="btn-link" href="{{ asset('student/edit') }}/{{$item['id']}}">Edit</a>
                 </td>
                 <td>
                     <a class="btn-link" href="../student/delete.php?id={{ $item['id'] }}">Delete</a>
@@ -49,5 +49,5 @@ Trang danh sách sinh viên
     </table>
 </div>
 
-    <a class="btn-link" href="{{ asset('student.insert') }}">Them sinh vien</a>
+    <a class="btn-link" href="{{ asset('student/insert') }}">Them sinh vien</a>
 @stop
