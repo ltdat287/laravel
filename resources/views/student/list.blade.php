@@ -33,13 +33,13 @@ Trang danh sách sinh viên
                 <td>{{ (isset($item['gender']) && $item['gender'] == 1) ? 'Male' : 'Fmale' }}</td>
                 <td>{{ (isset($item['class'])) ? $item['class'] : '' }}</td>
                 <td>
-                    <a class="btn-link" href="../student/chooseclass.php?id={{ $item['id'] }}">Choose</a>
+                    <a class="btn-link" href="{{url('class/selectclass/'.$item['id'])}}">Select Class</a>
                 </td>
                 <td>
-                    <a class="btn-link" href="{{ asset('student/edit') }}/{{$item['id']}}">Edit</a>
+                    <a class="btn-link" href="{{asset('student/edit')}}/{{$item['id']}}">Edit</a>
                 </td>
                 <td>
-                    <a class="btn-link" href="../student/delete.php?id={{ $item['id'] }}">Delete</a>
+                    <a class="btn-link" href="{{asset('student/destroy')}}/{{$item['id']}}">Delete</a>
                 </td>
             </tr>
         @endforeach

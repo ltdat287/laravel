@@ -6,7 +6,7 @@
                 <li class="active"><a href="{{ asset('student/list') }}">List Student <span class="sr-only">(current)</span></a>
                 </li>
                 <li><a href="javascript:void(0)">Quản lý sinh viên</a></li>
-                <li><a href="#">Quản lý lớp</a></li>
+                <li><a href="{{{url('class/list')}}}">Quản lý lớp</a></li>
                 <li><a href="javascript:void(0)">Quản lý điểm</a></li>
                 <li><a href="javascript:void(0)">Quản lý tin tức</a></li>
             </ul>

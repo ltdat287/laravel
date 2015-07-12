@@ -15,10 +15,9 @@ Route::get('login', function () {
     return view('login');
 });
 
-/*Route::get('/', function()
-{
-    return view('login');
-});*/
+Route::get('/', function(){
+    return view('student.list');
+});
 
 Route::get('register', function () {
     return view('register');
@@ -52,3 +51,31 @@ Route::get('student/edit/{id}',[
 ]);
 
 Route::post('student/edit/{id}','StudentController@update');
+
+Route::get('student/destroy/{id}','StudentController@destroy');
+
+//Get info about list class
+Route::get('class/list',['as' => 'list.class','uses' => 'ClassController@index']);
+
+//add request insert info classname
+Route::post('class/add','ClassController@create');
+
+Route::get('class/add','ClassController@create');
+
+//delete class from class list
+Route::get('class/delete/{id}','ClassController@destroy');
+
+//edit information class from class list
+Route::get('class/edit/{id}', ['as' => 'edit.class', 'uses' => 'ClassController@edit']);
+
+//send change info class from class post form
+Route::post('class/edit/{id}', ['as' => 'edit.comp.class', 'uses' => 'ClassController@update']);
+
+//get information to choosen class for student
+Route::get('class/selectclass/{id}', ['as' => 'select.class', 'uses' => 'ClassController@selectClass']);
+
+//post select class for student
+Route::post('class/selectclass/{id}', ['as' => 'select.class.conf', 'uses' => 'ClassController@updateClass']);
+
+//get list student from class
+Route::get('class/liststudent/{id}', ['as' => 'class.liststudent', 'users' => 'ClassController@getStudent']);

@@ -74,5 +74,14 @@ class StudentController extends Controller
             return redirect()->route('student.list');
         }
     }
+
+     public function destroy($id){
+        $result = Student::find($id);
+        if (isset($result)){
+            $destroy = Student::where('id','=',$id)->delete();
+            return redirect()->route('student.list');
+        }
+        return 'Không thể xóa sinh viên này';
+     }
 }
 
